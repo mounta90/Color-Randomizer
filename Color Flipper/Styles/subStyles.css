@@ -1,0 +1,184 @@
+:root {
+  --neonPink: #f535aa;
+  --neonBlue: #1fffff;
+  --neonGreen: #39ff14;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Teko", sans-serif;
+}
+
+/* Start of Heading Section */
+
+.navBar {
+  background: black;
+  display: flex;
+  width: 100vw;
+  height: 7.5vh;
+  justify-content: space-around;
+  align-items: center;
+  /* align-items: center; */
+}
+
+.navContent {
+  display: flex;
+  justify-content: center; /*Centering text*/
+  align-items: center;
+}
+
+.navContent a {
+  /* text-align: center; */
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nC1 a {
+  color: white;
+  text-transform: uppercase;
+}
+
+.nC2 a {
+  margin: 0 10px;
+  text-transform: lowercase;
+
+  position: relative;
+}
+
+.nC2 a::before {
+  content: "";
+  display: block;
+  background: white;
+  height: 3px;
+  width: 100%;
+
+  position: absolute;
+  top: -6.5px;
+
+  transform-origin: left;
+  transform: scale(0, 1);
+}
+
+.nC2 a:hover::before {
+  transform: scale(1, 1);
+  transition: transform ease-in-out 300ms;
+}
+
+#Simple {
+  color: lightpink;
+}
+
+#Simple:hover {
+  color: var(--neonPink);
+}
+
+#Simple::before {
+  background: var(--neonPink);
+}
+
+#Hex {
+  color: lightgreen;
+}
+
+#Hex:hover {
+  color: var(--neonGreen);
+}
+
+#Hex::before {
+  background: var(--neonGreen);
+}
+
+#Rgb {
+  color: lightblue;
+}
+
+#Rgb:hover {
+  color: var(--neonBlue);
+}
+
+#Rgb::before {
+  background: var(--neonBlue);
+}
+
+/* Start of Body Section */
+
+body {
+  position: relative;
+}
+
+.mainArea {
+  width: 50vw;
+  height: 20vh;
+  /* background: grey; */
+
+  position: absolute;
+  top: calc((100vh - 7.5vh) * 0.5);
+  left: calc(100vw * 0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mAcontent {
+  display: flex; /* flexbox nesting*/
+}
+
+.colorLabel {
+  padding: 0 5px;
+
+  align-items: center;
+
+  background: white;
+  height: 60%;
+  border: 3px solid black;
+  border-radius: 3px;
+
+  font-size: 1.5rem;
+  color: black;
+}
+
+.colorRandomizer {
+  justify-content: center;
+  align-items: center;
+}
+
+#colorText {
+  display: inline-block;
+  padding: 5px 5px;
+  margin: 0 auto;
+  width: 66.66666%;
+
+  background: black;
+
+  border: black solid 3px;
+  border-radius: 3px;
+
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#btn {
+  width: 50%;
+  background: white;
+  border: black solid 2px;
+  border-radius: 5px;
+
+  color: black;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+#btn:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
